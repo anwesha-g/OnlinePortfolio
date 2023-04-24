@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+  
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -63,7 +101,7 @@
             <div class="col-md-10 col-md-offset-1">
               <div class="row">
                 <div class="col-xs-12 col-md-6">
-                  <p>Here is my <a href="https://drive.google.com/file/d/1EtM7IWwUISgVQFytwDHBgAqlOJYSdT7t/view?usp=share_link" target="_blank">resume.</a>
+                  <p>Here is my <a href="https://drive.google.com/file/d/1Su3RXa9TkJeymN18KGh44e_MzO4Arflq/view?usp=share_link" target="_blank">resume.</a>
                   <br> 
                   <p align="center"><iframe id="iframepdf" src="./assets/AnweshaGhoshResume.docx.pdf" height = "1130" width="1000"></iframe>
                   <br></p>
