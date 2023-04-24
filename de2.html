@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column2 {
+  float: right;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  
+.button {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+  
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #000000;
+}
+
+.button1:hover {
+  background-color: #000000;
+  color: white;
+  display: inline-block;
+
+}
+</style>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>Honors DE Proj - AnweshaGhoshPortfolio</title>  
+
+<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">Home</a></li>
+            <li><a href="./about.html" title="">About Me</a></li>
+            <li><a href="./resume.html" title="">Resume</a></li>
+            <li><a href="./projects.html" title="">Projects</a></li>
+            <li><a href="./personalinitiatives.html" title="">Personal Initiative</a></li>
+            <li><a href="./careerexp.html" title="">Career Exploration</a></li>
+            <li><a href="./contact.html" title="">Contact Me</a></li>
+        </ul>
+
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./assets/images/header.png" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">PCB Arduino Metal Detector</h1>
+          </div>
+          <p><u>Project</u>: 2.2.5 Circuit Design Displays <br> <u>Course</u>: Honors Digital Electronics <br> <u>Duration</u>: Jan-Feb 2023 <br> <u>Objective</u>: Create a circuit on a printed circuit board <br> <u>Type of Project</u>: Individual </p>
+          <p> <b> - </b> </p>
+          <p>The objective of this project is to create a working metal detector with Arduino and reduced price. As per the project’s <a href="https://drive.google.com/file/d/1nOJkTaxFrJhVstNaj2Doyi24oW9M1x9U/view?usp=sharing" target="_blank">rubric</a>, I need to create a circuit as a printed circuit board. Since I had never created a printed circuit board before, I was new to the process and knew there would be a lot of troubleshooting and perseverance needed. I had to follow the <a href="https://drive.google.com/file/d/1T4N3T9Pd7b8kud0RVk-dwx5qowQNO5_J/view?usp=sharing" target="_blank">instructions</a> exactly to the point, while also being aware that the methods listed might not always work. It meant I would be ready to adapt.<br>
+            My circuit is a metal detector controlled by Arduino. A coil and capacitor is used for detecting the metal, while a LED and speaker are used as output indicators. A signal diode is used for reducing voltage, while a resistor is used for limiting current to the Arduino pin. Metal detectors can be found at airports, theaters or various other public places. They are used to ensure the safety of the public, by checking for metal present in arms or guns. This circuit is intended to detect metal through a simpler, cheaper design. After looking through multiple sources, I decided to go with this circuit design, which incorporated an Arduino Nano with a capacitor, “core” coil and diode. While testing different circuits, I decided against a circuit that did not use an Arduino but a 555 timer instead as the coil I had did not have enough rotations to be able to detect metal at the same speed of the 555 timer. <br>
+            I first tested different variations of the metal detector circuit on my breadboard. After testing different materials for coils and confirming that my circuit worked for sure, I moved to create my circuit schematic on Fusion360. After creating the circuit (shown below), I worked on fabricating a PCB design to fit all the components and ensure that there was no overlap. I also ensured that there were no air wires left unrouted. The PCB layout is below and annotated to showcase all the different components of the circuit. After printing my circuit out to check if the scale of components was correct, I realized that my pads were really small. I also realized after one iteration of finally transferring the mask onto the copper plate with the iron that the connecting lines were so thin that all the copper had dissolved while etching. To troubleshoot this, I fixed my PCB layout to make the pads and air wires larger. Masking was a challenging and frustrating process. First, I was trying to use glossy paper to transfer the mask (made with Viewmate and also shown below). Glossy paper was too thick; the acetone method and the ironing method did not work. It was also impossible to tell when the mask had completely transferred. Overdoing the masking was also really easy. Thus, I used magazine paper instead. Magazine paper was still glossy and much thinner. This meant that the heat could travel through faster, transferring the mask ink much more accurately. When the masking process was completed to the best of my ability, I moved to drill holes into the pads. I accidentally scratched the copper away in some places, making the next step, soldering, a bit more difficult. However, I persevered and the continued the process all the way through. My metal detector circuit could accurately function and detect metal within 5-8 cm of the coil, which can be seen in the images below. The completed PCB is shown below. A more detailed description of my process is available in my <a href=https://drive.google.com/file/d/1jYe8NvWsngM9KjwiC02f8xxTbIup8i8B/view?usp=share_link" target="_blank">documentation</a>. I am glad to say that I’ve learned so much about how to start from a schematic of a circuit and transfer the design onto a copper plate to make a printed circuit board through masking and etching. It was difficult but I was successful at making a <a href="https://drive.google.com/file/d/1Yin_VdUr7g9jf3bYiaI4DhfUTnPdwG4k/view?usp=share_link" target="_blank">working DIY metal detector with Arduino</a>. 
+</p>
+      <div class="row">
+        <div class="column">
+          <img src="./assets/images/de2_filler1.png" alt="schematic" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="./assets/images/de2_filler2.png" alt="masked and etched" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="./assets/images/de2_filler3.png" alt="soldered" style="width:100%">
+        </div>
+      </div>
+          
+      <div class="row">
+        <div class="column2">
+          <img src="./assets/images/de_nometal.png" alt="no metal" style="width:100%"> <p>Here is the metal detector in its low state, with the LED and buzzer off with no metal near the coil.</p>
+        </div>
+        <div class="column2">      
+          <img src="./assets/images/detitle2.jpeg" alt="metal present" style="width:100%"> <p>Here is metal detector with the LED on, showing how the metal is detected. The buzzer is also beeping.</p>
+        </div>
+      </div>    
+
+      <div class="row">
+        <a href="https://drive.google.com/file/d/1jYe8NvWsngM9KjwiC02f8xxTbIup8i8B/view?" target="_blank">
+            <button class="button button1" style="width:100%">View Documentation</button>
+        </a>
+        <a href="https://drive.google.com/file/d/1Yin_VdUr7g9jf3bYiaI4DhfUTnPdwG4k/view?usp=share_link" target="_blank">
+            <button class="button button1" style="width:100%">View Demo</button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Contact me at onweshaghosh@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+--> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+
+</html>
