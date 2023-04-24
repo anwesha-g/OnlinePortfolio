@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
 
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+  
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -57,39 +95,59 @@
           </div>
           
           <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              <div class="row">
-                <div class="col-xs-12 col-md-6">
-                  <img src="./assets/images/patriotjets.jpeg" class="img-responsive" alt=""> 
-                  <br>
-                  <img src="./assets/images/patriotjets2.jpeg" class="img-responsive" alt="">
-                  <br>
-                  <img src="./assets/images/patriotjets3.jpeg" class="img-responsive" alt="">
-                  <br>
-                  <img src="./assets/images/patriotjets4.jpeg" class="img-responsive" alt="">
-                  <br>
-                  <img src="./assets/images/guestspeaker.jpeg" class="img-responsive" alt="">
-                </div>
-                <div class="col-xs-12 col-md-6">
-                  <h3>A Multitude of Opportunites...</h3>
-                  <p>During my time in the engineering program, I have met a number of industry professionals through workplace field trips and guest speakers…some have shown me a deeper vision into fields I wish to undertake. Others have shown me field that I'd like to stay far away from. No matter what, there was something always to learn about myself and from the field trips themselves. </p>
-                  <h4>Field Trips</h4>
-                  <p>My favorite field trip was the Patriots Jet Foundation Field trip, as the idea of working with planes and flying through the clouds brings me back to my dreams as a child. The idea of flying through space was part of my Star Wars dream, so watching the jets take off reminded me of that. I learnt about how pilots train, playing around with the plane simulations. Even the simulation was hard to navigate, especially turning with such big crafts. However, playing around and trying to make a perfect landing on short notices was quite fun. I met an entrepreneur who was working on long distance drones that could drop off packadages, in order to replace the system that companies like Amazon use to transport goods to customers. I found the idea to be interesting, especially trying to incorporate AI into the drones' navigation. The navigation would have to be so specific, more accurate than a GPS, that it was interesting how they managed to do this. This related to my Destination Imagination Technical Challenge a few years ago. Our goal was to use a drone to drop off a specific load at a location. However, since the location was within a small distance, GPS navigation was out of question. We attempted to use AprilTags or QR Codes, since AI was too advanced for us. However, we were not successful. Thus, this field trip provided a learning experience that improved my own knowledge from previous products. <br></br> Another field trip I went on was the Dig Deep Farms. I am part of Mr. Kaehms's Enviromental Tech Club, and thus this field trip interested me and reminded me once again how much I would like to work within this field. The field trip gave me ideas for how DHS could have its own sustainable greenhouse. This community driven garden is quite inspiring, as it aims to improve the Eden area's issue with employment rates, diabetes rates, childhood obesity, and heart disease. Though the amount of technology involvment is still being improved, it was fun meeting the gardeners of the Dig Deep Farm, and watching them explain how fun it is for them to be able to watch something grow from a tiny seed into something that helps his community get stronger. Walking around the farm and listening to the locals explain how much this farm has changed their lives was mesmerizing, and reminded me how I could use technology and biology to give back to the community. </p>
-                  <h4>Guest Speakers</h4>
-                  <p>I found Gary Richter's adventures as a security analyst for Sandia National Labs to be quite the tale, and it drew my attention so unexpectedly. Though he could not share details about his top secret missions, I would've never thought that I could be interested in the nuclear energy field. This guest speaker taught me that life of a security analyst could be quite the adventure, and not always computer-desk work. My previous cybersecurity experience does not compare to Richter's tales, but my Cal Poly Innovation Challenge put me in the place of a security analyst. I could be running around the Cal Poly campus for clues, in order to undersand what occured at a murder scene. From investigating a real base's barracks to coding on my computer, Richter's stories reminded me of this. The job of a security analyst was mesmerizing, especially with his stories about finding nuclear warheads and disabling them. When he told the story about living with a local tribe and hunting tigers to identify terrorists with nuclear weapons, I know he had my attention. I would love to experience that as well, since the dangers seem to just make the job all the more interesting. Coding at a desk could be tiresome, but being a engineering detective? Always moving on the job? His stories taught me the dangers and also the excitement of risk. <br> </br> 
-                The guest speaker Donald James talked about how important kindness and strategic communications is to the workforce. In order to get a job, one must be able to speak strongly about themselves, in order to market products. All companies require someone who is a strong speaker, able to talk passionately and emotionally about their wishes. This brings the idea of consulting and speaking (soft skills) to the table. It does not matter how great one's skills is, but how great one can talk about their skills. After all, if someone is quiet about their skills, then no one knows what they can do. This makes them useless. James gave us a powerpoint presentation about the gains of strategic communications, and how to be effective. It was eye opening to see someone from such a prestigious organization such as NASA talking about how important kindness and communication skills are to the real world workforce.</p>
-
-                  
-                </div>
-              </div>
-            </div>
+            <h3>Looking Forward to My Future</h3>
+            <p>During my time in the engineering program, I have met a number of industry professionals through workplace field trips and guest speakers…some have shown me a deeper vision into fields I wish to undertake. Others have shown me field that I'd like to stay far away from. No matter what, there was something always to learn about myself and from the field trips themselves. </p>
           </div>
-          
-          
-       </div>
+        </div>
+
+        <button class="accordion">Field Trips</button>
+        <div class="panel">
+          <div class="col-xs-12 col-md-6">
+            <br>
+            <img src="./assets/images/algae.png" class="img-responsive" alt="">
+            <br>
+            <img src="./assets/images/mizuho.png" class="img-responsive" alt="">
+            <br>
+            <img src="./assets/images/digdeep1.png" class="img-responsive" alt="">
+            <br>
+            <img src="./assets/images/patriotjets.jpeg" class="img-responsive" alt=""> 
+            <br>
+            </div>
+            <div class="col-xs-12 col-md-6">
+            <p><br>My favorite field trip was when I was given a chance to visit algae testbeds. I was able to tour the Joint BioEnergy Institute (JBEI) labs in Emeryville and Lawrence Livermore National Laboratories (LLNL) and Sandia National Laboratories (SNL) in Livermore with my mentor, Mr. Ben Wu. Through these experiences, we were able to learn more about what a laboratory setting and engineering workplace would look like. We were given the opportunity to talk to scientists at JBEI about what kind of work they do and what they specialize in. We liked the hands-on element of working in a laboratory such as JBEI, and seeing all of the advanced machines and materials in this lab was intriguing. In the future, working in this kind of laboratory setting would be beneficial for research opportunities. For the LLNL tour, we were able to go inside the National Ignition Facility (NIF) which contained the world’s largest laser system. Being able to learn about all the intricate electronics and programs that make this laser possible showed us how concepts we are learning about in our Digital Electronics class can be applied in the real world. At SNL, we met Ryan Davis who showed us his “scum ranch,” which was a joke between him and the other SNL scientists who worked on algae. We saw raceway test bed ponds, although we were visiting at a time when the ponds were not in action. Ryan showed us the systems used to control the ponds, describing how he monitored the algae growth. He talked about ways to boost growth, such as with flue gas. In the picture behind us, we are seeing how water is being pumped across a channel with nutrients, helping grow the algae freely on the bed. Overall, we were excited to take a look at how research is done in a lab.<br></br>
+              I wanted to learn more about biomedical engineering, so the visit to Mizuho OSI proved insightful. I already know that I don’t love the responsibility of taking care of someone’s life, but apart from that, I enjoyed understanding the technology and research that went into making surgical science safe. I found the knee surgery table to be quite interesting, especially with the degrees of rotation available. It was also really cool laying down on the surgical beds, especially feeling the material mold around me. I never thought that there would be such intense care to maintain pressure, especially considering that these surgical beds had been made first to transport dolphins. It was really interesting to learn about, but I cannot envision myself in a field like that since I prefer a more wet-lab research feel. <br></br>
+              I also enjoyed the field trip was the Patriots Jet Foundation Field trip, as the idea of working with planes and flying through the clouds brings me back to my dreams as a child. The idea of flying through space was part of my Star Wars dream, so watching the jets take off reminded me of that. I learnt about how pilots train, playing around with the plane simulations. Even the simulation was hard to navigate, especially turning with such big crafts. However, playing around and trying to make a perfect landing on short notices was quite fun. I met an entrepreneur who was working on long distance drones that could drop off packadages, in order to replace the system that companies like Amazon use to transport goods to customers. I found the idea to be interesting, especially trying to incorporate AI into the drones' navigation. The navigation would have to be so specific, more accurate than a GPS, that it was interesting how they managed to do this. This related to my Destination Imagination Technical Challenge a few years ago. Our goal was to use a drone to drop off a specific load at a location. However, since the location was within a small distance, GPS navigation was out of question. We attempted to use AprilTags or QR Codes, since AI was too advanced for us. However, we were not successful. Thus, this field trip provided a learning experience that improved my own knowledge from previous products. <br></br> Another field trip I went on was the Dig Deep Farms. I am part of Mr. Kaehms's Enviromental Tech Club, and thus this field trip interested me and reminded me once again how much I would like to work within this field. The field trip gave me ideas for how DHS could have its own sustainable greenhouse. This community driven garden is quite inspiring, as it aims to improve the Eden area's issue with employment rates, diabetes rates, childhood obesity, and heart disease. Though the amount of technology involvment is still being improved, it was fun meeting the gardeners of the Dig Deep Farm, and watching them explain how fun it is for them to be able to watch something grow from a tiny seed into something that helps his community get stronger. Walking around the farm and listening to the locals explain how much this farm has changed their lives was mesmerizing, and reminded me how I could use technology and biology to give back to the community. i actually went back and did this field trip twice! My friend and I hated the rain but the watermelons tasted really good. The peppers were also really spicy- I had no idea but at least my friend didn't expect it either. The absolutely soaked clothes from the pouring rain was worth it since it just made the memories even funnier. </p>
+        
+          </div>
+        </div>
+        
+        <button class="accordion">Guest Speakers</button>
+        <div class="panel">
+          <div class="col-xs-12 col-md-6">
+            <br>
+            <img src="./assets/images/kathleen.png" class="img-responsive" alt="">
+            <br>
+            <img src="./assets/images/alextorres.png" class="img-responsive" alt="">
+            <br>
+            <img src="./assets/images/guestspeaker.jpeg" class="img-responsive" alt="">
+            <br>
+            <img src="./assets/images/donaldjames.png" class="img-responsive" alt="">
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <p><br>Kathleen Morse, an MIT graduate who works at Yosemite Space, presented a talk about how robotics was enabling space assembly. She explained how new materials enable new tech. I was always uninterested in material science, but I did not realize all of the applications of material science. Morse explained how different materials were being tested to control swarms. By using drone swarms as an example and a practice step towards space assembly, Morse showcased a variety of different possibilities. From magnets to visualized models, she also showed us simulations of space assembly. Morse evaluated gumstick and gumstix payload in space, as well as nanoracks external platform, also known as NREP. In simple terms, she is currently resaerching robotics in space. She is currently working on the CUBEster for Artemis 1 Mission in Deep Space. I thought the incorporation of material science and swarm technology for developing deep space robots was interesting.
+              <br>I learned about the college admissions process and how to write essays from Alex Torres. She is on the UC Admissions office board, so her insight into the process is helpful. Torres explained how college admissions is how to frame your identity and your joureny from 9th grade and above. She also explains how it is important to show and not tell in UC essays. In order to understand the specifics, Torres explained how some majors were more difficult than otheres (impacted majors) as well as the different portfolios that accompanied different schooling options. She also relieved some stress about GPAs and SAT scores by telling us how a computer actually "sifts" through the applications first. The computer system ensures that the applicant meets the minimum GPA and credits. The GPA may not be always publicly available, but admission statistics are posted after cycles and available online. The computer system only flags applicants if there are major red flags, like missing courses or multiple failing grades. From there, Torres explains the application as a framed argument for why you should be allowed to attend the school. Thus, the "why us" essays hold more importance than students realize. This is the chance for the student to display how badly the student wants to go to such school and a chance to display the research they have done for going into the specific program. Overall, Alex helped me understand and deconstruct the complex college admission process to make it less overwhelming. <br>
+              <br>I found Gary Richter's adventures as a security analyst for Sandia National Labs to be quite the tale, and it drew my attention so unexpectedly. Though he could not share details about his top secret missions, I would've never thought that I could be interested in the nuclear energy field. This guest speaker taught me that life of a security analyst could be quite the adventure, and not always computer-desk work. My previous cybersecurity experience does not compare to Richter's tales, but my Cal Poly Innovation Challenge put me in the place of a security analyst. I could be running around the Cal Poly campus for clues, in order to undersand what occured at a murder scene. From investigating a real base's barracks to coding on my computer, Richter's stories reminded me of this. The job of a security analyst was mesmerizing, especially with his stories about finding nuclear warheads and disabling them. When he told the story about living with a local tribe and hunting tigers to identify terrorists with nuclear weapons, I know he had my attention. I would love to experience that as well, since the dangers seem to just make the job all the more interesting. Coding at a desk could be tiresome, but being a engineering detective? Always moving on the job? His stories taught me the dangers and also the excitement of risk. <br> </br>The guest speaker Donald James talked about how important kindness and strategic communications is to the workforce. In order to get a job, one must be able to speak strongly about themselves, in order to market products. All companies require someone who is a strong speaker, able to talk passionately and emotionally about their wishes. This brings the idea of consulting and speaking (soft skills) to the table. It does not matter how great one's skills is, but how great one can talk about their skills. After all, if someone is quiet about their skills, then no one knows what they can do. This makes them useless. James gave us a powerpoint presentation about the gains of strategic communications, and how to be effective. It was eye opening to see someone from such a prestigious organization such as NASA talking about how important kindness and communication skills are to the real world workforce.</p>
+        </div>
       </div>
+        
+        <button class="accordion">Mentorship Program</button>
+        <div class="panel">
+          <p>My mentor, Mr. Ben Wu, has guided me through prepping for my future. He has offered me opportunties to visit labs to see the science I read about in real life. I am so lucky to have found another person with a shared interest in algae, so I able to learn from Mr. Wu's experience. He has taught me how to speak and network with people, such as for internships and interviews, as well as how to present my research projects. By cultivating my interst and helping me stay inspired, Mr. Wu has been a close advisor to my science fair research project and a strong source of encouragment. I am so grateful for his input on how to create formal research presentations and how to prepare myself for the future.</p>
+        </div>
+        
+       </div>
     </div>
-  </div>
+</div>
 
 
 <footer class="footer-container text-center">
@@ -108,6 +166,22 @@
   });
 </script>
 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
 <script>
